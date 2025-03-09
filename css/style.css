@@ -41,7 +41,7 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: "Oswald", sans-serif;
+  font-family: "Almarai", sans-serif;
   text-transform: uppercase;
 }
 
@@ -104,6 +104,9 @@ h5,
   right: 0;
   z-index: 21;
   background: rgba(0, 0, 0, 0.2);
+}
+li{
+  text-align: left;
 }
 
 .btn {
@@ -409,13 +412,32 @@ h5,
 /* Navbar */
 .site-logo {
   position: relative;
-  font-weight: 900;
+  /* font-weight: 900;
   font-size: 1.3rem;
   font-family: "Oswald", sans-serif;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.2rem; */
+  width: 25%;
 }
 .site-logo a {
   color: #f1f1f1;
+}
+.site-logo img{
+  width: 70%;
+}
+
+.logo {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#logo1 {
+  opacity: 1;
+}
+
+#logo2 {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .site-navbar {
@@ -990,11 +1012,11 @@ h5,
 }
 
 .site-section {
-  padding: 6em 0;
+  padding: 4em 0;
 }
 @media (max-width: 991.98px) {
   .site-section {
-    padding: 4em 0;
+    padding: 2em 0;
   }
 }
 
@@ -1076,6 +1098,7 @@ h5,
   bottom: -20%;
   right: -20%;
   border-radius: 50px;
+  z-index: 9999;
 }
 @media (max-width: 991.98px) {
   .image-absolute-box .box {
@@ -1085,6 +1108,7 @@ h5,
     width: 100%;
     max-width: 100%;
     bottom:-60px;
+    z-index: 9999;
   }
 }
 .image-absolute-box .box .icon-wrap {
@@ -1370,6 +1394,7 @@ h5,
 }
 
 .nonloop-block-14 .owl-stage {
+
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -1379,6 +1404,21 @@ h5,
   overflow: hidden;
   -webkit-box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.4);
   box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.4);
+}
+.slide-one-item-alt img {
+  border: 1px solid #000; /* لون الإطار أسود وسُمكه 3px */
+  border-radius: 10px; /* زوايا مستديرة (اختياري) */
+}
+.image-absolute-box img {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* ظل خفيف لإضفاء العمق */
+  border-radius: 10px; /* تدوير الحواف قليلاً لمظهر أكثر نعومة */
+  transform: scale(1.02); /* تكبير بسيط لجذب الانتباه */
+  transition: all 0.3s ease-in-out; /* تأثير سلس عند التحريك */
+}
+
+.image-absolute-box img:hover {
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4); /* زيادة الظل عند التحويم */
+  transform: scale(1.05); /* تكبير عند التحويم */
 }
 
 @media (max-width: 991.98px) {
@@ -1436,12 +1476,12 @@ h5,
 }
 .testimonial-wrap blockquote p.author {
   font-size: 1.2rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Almarai", sans-serif;
 }
 
 .testimonial-wrap blockquote span {
   display: inline-block;
-  font-family: "Oswald", sans-serif;
+  font-family: "Almarai", sans-serif;
 }
 
 @media (max-width: 991.98px) {
@@ -1588,5 +1628,4 @@ h5,
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
 
