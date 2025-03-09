@@ -24,9 +24,11 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
   
 
   <div id="overlayer"></div>
@@ -54,8 +56,10 @@
       <div class="container-fluid">
         <div class="d-flex align-items-center">
           <div class="site-logo">
-            <a href="index.html" class="text-uppercase">HUMANITY AI`d</a>
+            <img src="./images/2.png" id="logo1" class="logo active" alt="Logo 1">
+            <img src="./images/3.png" id="logo2" class="logo" alt="Logo 2">
           </div>
+          
           <div>
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-xl-block">
@@ -88,18 +92,18 @@
             <div class="owl-carousel slide-one-item-alt-text">
               <div class="slide-text">
                 <h1>Empowering Vision with AI</h1>
-                <p class="mb-5">Enhancing your world through smart glasses and artificial intelligence.</p>
-                <p><a href="#" target="_blank" class="btn btn-outline-light py-3 px-5">Get Started</a></p>
+                <p class="mb-5">Empowering humanity to see the world with AI powered smart glasses</p>
+                <p><a href="#" target="_blank" class="btn btn-outline-dark py-3 px-5">Get Started</a></p>
               </div>
               <div class="slide-text">
                 <h1>The Future is Hands-Free</h1>
-                <p class="mb-5">Seamless AI-powered interaction, redefining digital experiences.</p>
-                <p><a href="#" target="_blank" class="btn btn-outline-light py-3 px-5">Get Started</a></p>
+                <p class="mb-5">Augmenting human senses with digital senses to enable better situational awareness.</p>
+                <p><a href="#" target="_blank" class="btn btn-outline-dark py-3 px-5">Get Started</a></p>
               </div>
               <div class="slide-text">
                 <h1>Smart Glasses, Smarter Life</h1>
-                <p class="mb-5">Revolutionizing daily tasks with AI-driven innovation.</p>
-                <p><a href="#" target="_blank" class="btn btn-outline-light py-3 px-5">Get Started</a></p>
+                <p class="mb-5">Blending human and artificial intelligence to enable effective engagement with life.</p>
+                <p><a href="#" target="_blank" class="btn btn-outline-dark py-3 px-5">Get Started</a></p>
               </div>
             </div>
           </div>
@@ -120,7 +124,7 @@
     
 
 
-    <div class="site-section section-1">
+    <div class="site-section">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 mr-auto mb-5" data-aos="fade-up">
@@ -135,6 +139,7 @@
                 <li>Real-time data access</li>
                 <li>Enhanced situational awareness</li>
               </ul>
+              <p><a href="#" target="_blank" class="btn btn-outline-dark py-3 px-5">Learn more</a></p>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -145,7 +150,7 @@
                 <p>
                   We believe that smart glasses will soon become the preferred platform for digital interaction, and we are working tirelessly to ensure that they deliver impactful and seamless user experiences.
                 </p>
-                <p class="mb-0"> <a href="#" class="text-danger">Learn more</a></p>
+                
               </div>
               <img src="images/about-us.png" alt="Image" class="img-fluid">
             </div>
@@ -160,7 +165,9 @@
         <div class="row">
           <div class="col-lg-6 mb-5">
             <h2 class="section-title">Our Services</h2>
-            <p>We provide cutting-edge solutions designed to enhance digital interaction through smart glasses.</p>
+            <p> 
+              We provide cutting edge solutions designed to enhance human interactions with the surroundings using smart glasses that blends humand and digital senses.
+            </p>
           </div>
         </div>
       </div>
@@ -243,7 +250,8 @@
           <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
             <div class="process bg-white rounded">
               <div>
-                <span class="flaticon-group display-4 text-primary mb-4 d-inline-block"></span>
+                <i class="fas fa-users display-4 text-primary mb-4 d-inline-block"></i>
+
                 <h3>Join Us</h3>
                 <p>Be part of a cutting-edge team shaping the future of AI-powered smart glasses technology.</p>
               </div>
@@ -253,7 +261,7 @@
       </div>
     </div>
 
-
+   
 
     <div class="site-section" id="contact-section"  data-aos="fade">
       <div class="container">
@@ -333,7 +341,7 @@
           </div>
 
           <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center;" >
-            <img src="./images/logo.png" alt="" style="width: 100%;">
+            <img src="./images/1.png" alt="" style="width: 100%;">
           </div>
 
         </div>
@@ -370,7 +378,24 @@
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/main.js"></script>
-    
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  var logo1 = document.getElementById("logo1");
+  var logo2 = document.getElementById("logo2");
+  var header = document.querySelector(".site-navbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) { // عندما ينزل المستخدم للأسفل
+      logo1.style.opacity = "0";
+      logo2.style.opacity = "1";
+    } else { // عندما يكون في الأعلى
+      logo1.style.opacity = "1";
+      logo2.style.opacity = "0";
+    }
+  });
+});
+
+    </script>
   
   </body>
 </html>
