@@ -355,5 +355,20 @@ jQuery(document).ready(function($) {
 	}
 	counter();
 
-
+	document.addEventListener("DOMContentLoaded", function () {
+		var logo1 = document.getElementById("logo1");
+		var logo2 = document.getElementById("logo2");
+		var header = document.querySelector(".site-navbar");
+	  
+		window.addEventListener("scroll", function () {
+		  if (window.scrollY > 50) { // عندما ينزل المستخدم للأسفل
+			logo1.style.opacity = "0";
+			logo2.style.opacity = "1";
+		  } else { // عندما يكون في الأعلى
+			logo1.style.opacity = "1";
+			logo2.style.opacity = "0";
+		  }
+		});
+	  });
+	  
 });
