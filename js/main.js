@@ -1,15 +1,18 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide',
- 	once: true
- });
+AOS.init({
+	duration: 800,
+	easing: 'slide',
+	once: true,
+	disable: window.innerWidth < 1024 // تعطيله للشاشات الصغيرة لمنع مشكلات العرض
+  });
+  
 
 jQuery(document).ready(function($) {
 
 	"use strict";
 
-	$(".loader").delay(1000).fadeOut("slow");
-  $("#overlayer").delay(1000).fadeOut("slow");	
+	$(".loader").fadeOut(500);
+	$("#overlayer").fadeOut(500);
+	
 
 	var siteMenuClone = function() {
 
