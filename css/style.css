@@ -42,7 +42,7 @@ h5,
 .h4,
 .h5 {
   font-family: "Almarai", sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .border-2 {
@@ -1309,14 +1309,15 @@ li{
   font-size: 1.5rem;
   color: #3f56a6;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .process {
   text-align: center;
   padding: 30px;
   border: 1px solid #d9d9d9;
-  height: 400px;
+  height: 420px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .service {
@@ -1415,6 +1416,17 @@ li{
   transform: scale(1.02); /* تكبير بسيط لجذب الانتباه */
   transition: all 0.3s ease-in-out; /* تأثير سلس عند التحريك */
 }
+.slide-one-item-alt img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+  border-radius: 10px; /* زوايا مدورة */
+  transition: box-shadow 0.3s ease; /* تأثير انتقالي عند التمرير */
+}
+
+
+.slide-one-item-alt img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* ظل أقوى عند التمرير */
+}
+
 
 .image-absolute-box img:hover {
   box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.4); /* زيادة الظل عند التحويم */
