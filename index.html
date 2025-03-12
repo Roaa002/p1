@@ -36,7 +36,8 @@
       opacity: 1 !important;
       visibility: visible !important;
     }
-  </style>
+    /* إضافة ظلال للصور */
+</style>
 </head>
 
 <body>
@@ -143,7 +144,7 @@
           <div class="col-lg-5 mr-auto mb-5" data-aos="fade-up">
             <div class="mb-5">
               <h2 class="section-title">Welcome to HUMANITY AI’ed</h2>
-              <h4>Transforming Everyday Experiences with AI and Smart Glasses</h4>
+              <h5>Transforming Everyday Experiences with AI and Smart Glasses</h5>
               <p class="mb-5">
                 At HUMANITY AI’ed, we are dedicated to revolutionizing the way people interact with technology. By
                 leveraging Artificial Intelligence (AI) and smart glasses, we aim to enhance productivity, efficiency,
@@ -230,55 +231,7 @@
       </div>
     </div>
 
-    <!-- <div class="site-section section-2 bg-light" id="careers-section" data-aos="fade">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 mb-5">
-            <h2 class="section-title">Careers: Join Our Team</h2>
-            <p>We’re Hiring: Computer Vision/AI Expert</p>
-            <p>We are looking for talented professionals who share our passion for AI and smart glasses technology. If
-              you are eager to be part of an innovative and fast-growing company, we invite you to apply.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="process bg-white rounded">
-              <div>
-                <span class="flaticon-glasses display-4 text-primary mb-4 d-inline-block"></span>
-                <h3>Responsibilities</h3>
-                <ul style="list-style-position: inside; padding-left: 0;">
-                  <li>Develop and optimize computer vision algorithms.</li>
-                  <li>Work on AI-driven applications for smart glasses.</li>
-                  <li>Collaborate with cross-functional teams to integrate AI solutions.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="process bg-white rounded">
-              <div>
-                <span class="flaticon-vector display-4 text-primary mb-4 d-inline-block"></span>
-                <h3>Requirements</h3>
-                <ul style="list-style-position: inside; padding-left: 0;">
-                  <li>Strong background in computer vision and AI.</li>
-                  <li>Experience with machine learning frameworks.</li>
-                  <li>Passion for innovation and technology.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="process bg-white rounded">
-              <div>
-                <i class="fas fa-users display-4 text-primary mb-4 d-inline-block"></i>
-                <h3>Join Us</h3>
-                <p>Be part of a cutting-edge team shaping the future of AI-powered smart glasses technology.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    
 
     <div class="site-section">
       <div class="container">
@@ -308,6 +261,41 @@
             </div>
           </div>
 
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section section-2 bg-light" id="careers-section" data-aos="fade">
+      <div class="container">
+        <div class="row justify-content-sm-between">
+          <div class="col-lg-6 mb-5">
+            <h2 class="section-title">Careers: Join Our Team</h2>
+            <p>We’re Hiring: Computer Vision/AI Expert</p>
+            <p>We are looking for talented professionals who share our passion for AI and smart glasses technology. If
+              you are eager to be part of an innovative and fast-growing company, we invite you to apply.</p>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="process shadow-sm rounded p-4"> <!-- تمت إضافة padding هنا -->
+              <div>
+                <i class="fas fa-users display-4 text-primary mb-4 d-inline-block"></i>
+                <h3>Join Us</h3>
+                <p>Be part of a cutting-edge team shaping the future of AI-powered smart glasses technology.</p>
+                
+                <p class="mt-3">If you're interested, please attach your CV below:</p>
+                
+                <!-- مكان لرفع السيرة الذاتية -->
+                <form action="#" method="post" enctype="multipart/form-data" class="mb-3">
+                  <div class="form-group">
+                    <label for="cv-upload" class="btn btn-primary btn-block">
+                      <i class="fas fa-upload"></i> Upload Your CV
+                    </label>
+                    <input type="file" id="cv-upload" name="cv" class="d-none" accept=".pdf,.doc,.docx">
+                  </div>
+                  <button type="submit" class="btn btn-outline-dark btn-block mt-3">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
