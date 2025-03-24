@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>HUMANITY AI’ed</title>
+    <title>HUMANITY AI’d</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -54,7 +55,7 @@
         .breadcrumb {
             position: absolute;
             bottom: 10px;
-           
+
             left: 15px;
 
             background: none;
@@ -77,7 +78,7 @@
         }
 
 
-        .job-posting {
+        /* .job-posting {
             background: #f9f9f9;
             padding: 30px;
             border-radius: 10px;
@@ -181,7 +182,7 @@
 
         .submit-button:hover {
             background: #218838;
-        }
+        } */
     </style>
 </head>
 
@@ -222,8 +223,8 @@
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-xl-block">
                                 <li><a href="./index.html#home-section" class="nav-link">Home</a></li>
                                 <li><a href="./about_us.html" class="nav-link">About Us</a></li>
-                                <li><a href="./index.html#services-section" class="nav-link">Our Services</a></li>
-                                <li><a href="./Careers.html" class="nav-link">Careers</a></li>
+                                <li><a href="./index.html#services-section" class="nav-link">Our Features</a></li>
+                                <li><a href="./careers.html" class="nav-link active">Careers</a></li>
 
                             </ul>
                         </nav>
@@ -233,7 +234,7 @@
                             <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-xl-block">
 
                                 <li class="cta"><a href="index.html#contact-section" class="nav-link"><span
-                                            class="border bg-danger rounded text-white border-danger">Contact</span></a>
+                                            class="border bg-danger rounded text-white border-danger">Contact Us</span></a>
                                 </li>
                             </ul>
                         </nav>
@@ -246,23 +247,24 @@
         </header>
 
         <div class="intro-section custom-owl-carousel breadcrumb-section" id="home-section">
-            <div class="container position-relative">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Jobs</li>
-                            </ol>
-                        </nav>
-                    </div>
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- شريط البحث -->
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="search....">
+                    <button id="search-button">search</button>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
-
-
-        <div class="site-section">
+<div class="search-results" id="search-results" style="display: none;">
+    <h3>Search result</h3>
+    <ul id="results-list"></ul>
+</div>
+        <!-- <div class="site-section">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8" data-aos="fade-up">
@@ -332,113 +334,197 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-
-
-
-        <!-- <div class="site-section section-2 bg-light" id="careers-section" data-aos="fade"> 
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mb-5">
-                        <h2 class="section-title">Careers: Join Our Team</h2>
-                        <p>We’re Hiring: Computer Vision/AI Expert</p>
-                        <p>We are looking for talented professionals who share our passion for AI and smart glasses
-                            technology. If
-                            you are eager to be part of an innovative and fast-growing company, we invite you to apply.
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <div class="process bg-white rounded">
-                            <div>
-                                <span class="flaticon-glasses display-4 text-primary mb-4 d-inline-block"></span>
-                                <h3>Responsibilities</h3>
-                                <ul style="list-style-position: inside; padding-left: 0;">
-                                    <li>Develop and optimize computer vision algorithms.</li>
-                                    <li>Work on AI-driven applications for smart glasses.</li>
-                                    <li>Collaborate with cross-functional teams to integrate AI solutions.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <div class="process bg-white rounded">
-                            <div>
-                                <span class="flaticon-vector display-4 text-primary mb-4 d-inline-block"></span>
-                                <h3>Requirements</h3>
-                                <ul style="list-style-position: inside; padding-left: 0;">
-                                    <li>Strong background in computer vision and AI.</li>
-                                    <li>Experience with machine learning frameworks.</li>
-                                    <li>Passion for innovation and technology.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-                        <div class="process bg-white rounded">
-                            <div>
-                                <i class="fas fa-users display-4 text-primary mb-4 d-inline-block"></i>
-                                <h3>Join Us</h3>
-                                <p>Be part of a cutting-edge team shaping the future of AI-powered smart glasses
-                                    technology.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div> -->
 
 
 
 
-        <footer class="footer-section bg-light">
+        <div class="site-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h3>About Us</h3>
-                        <p>
-                            At HUMANITY AI’ed, we are dedicated to revolutionizing the way people interact with
-                            technology. By
-                            leveraging Artificial Intelligence (AI) and smart glasses, we aim to enhance productivity,
-                            efficiency, and
-                            quality of life.
-                        </p>
-                    </div>
-
-                    <div class="col-md-3 ml-auto">
-                        <h3>Links</h3>
-                        <ul class="list-unstyled footer-links">
-                            <li><a href="index.html#home-section" class="smoothscroll">Home</a></li>
-                            <li><a href="./about_us.html" class="smoothscroll">About Us</a></li>
-                            <li><a href="./index.html#services-section" class="smoothscroll">Our Services</a></li>
-                            <li><a href="Careers.html" class="smoothscroll">Careers</a></li>
-                            <li><a href="Privacy.html" class="smoothscroll">Terms and Privacy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center;">
-                        <img src="./images/1.png" alt="" style="width: 100%;">
-                    </div>
-
-                </div>
-
-                <div class="row pt-5 mt-5 text-center">
-                    <div class="col-md-12">
-                        <div class="border-top pt-5">
-                            <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved <i
-                                    class="icon-heart text-danger" aria-hidden="true"></i> by <a href=""
-                                    target="_blank">Bebsa6a</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-
+                    <!-- Job 1 -->
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="job-posting">
+                            <h2 class="job-title">Frontend Developer</h2>
+                            <h3 class="job-subtitle d-flex justify-content-between align-items-center">
+                                <span>Mid-Level</span>
+                            </h3>
+                            <span class="job-type">San Francisco, CA (Remote Possible)</span>
+                            <p class="job-description">We're looking for a skilled Frontend Developer to join our growing team.</p>
+                            <a href="#" class="read-more small-link" data-job-id="1">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="read-less small-link hidden" data-job-id="1">Read Less <i class="fas fa-arrow-up"></i></a>
+                            <div id="job-details-1" class="job-details hidden">
+                                <h4>🔹 Full Description:</h4>
+                                <p><strong>Responsibilities:</strong></p>
+                                <ul>
+                                    <li>Develop responsive web applications using React.js</li>
+                                    <li>Collaborate with UX designers to implement pixel-perfect interfaces</li>
+                                    <li>Optimize applications for maximum speed and scalability</li>
+                                    <li>Participate in code reviews and team knowledge sharing</li>
+                                </ul>
+                                <p><strong>Requirements:</strong></p>
+                                <ul>
+                                    <li>3+ years of professional frontend development experience</li>
+                                    <li>Expertise in JavaScript, HTML5, CSS3/SASS</li>
+                                    <li>Experience with Redux or similar state management libraries</li>
+                                    <li>Familiarity with RESTful APIs and modern authorization mechanisms</li>
+                                    <li>Bachelor's degree in Computer Science or related field preferred</li>
+                                </ul>
+                                <p><strong>Nice to Have:</strong></p>
+                                <ul>
+                                    <li>Experience with TypeScript</li>
+                                    <li>Knowledge of testing frameworks (Jest, Cypress)</li>
+                                    <li>Understanding of CI/CD pipelines</li>
+                                </ul>
+                                <a href="#" class="apply-button" data-job-id="1">Apply Now</a>
+                            </div>
                         </div>
                     </div>
+        
+                    <!-- Job 2 -->
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="job-posting">
+                            <h2 class="job-title">UX/UI Designer</h2>
+                            <h3 class="job-subtitle d-flex justify-content-between align-items-center">
+                                <span>Senior Level</span>
+                            </h3>
+                            <span class="job-type">New York, NY (Hybrid)</span>
+                            <p class="job-description">Seeking a creative UX/UI Designer to lead our design initiatives.</p>
+                            <a href="#" class="read-more small-link" data-job-id="2">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="read-less small-link hidden" data-job-id="2">Read Less <i class="fas fa-arrow-up"></i></a>
+                            <div id="job-details-2" class="job-details hidden">
+                                <h4>🔹 Full Description:</h4>
+                                <p><strong>Responsibilities:</strong></p>
+                                <ul>
+                                    <li>Lead the design of digital products from concept to final hand-off</li>
+                                    <li>Create user flows, wireframes, prototypes, and high-fidelity mockups</li>
+                                    <li>Conduct user research and usability testing</li>
+                                    <li>Maintain and evolve our design system</li>
+                                    <li>Collaborate closely with product managers and developers</li>
+                                </ul>
+                                <p><strong>Requirements:</strong></p>
+                                <ul>
+                                    <li>5+ years of UX/UI design experience</li>
+                                    <li>Strong portfolio showcasing problem-solving skills</li>
+                                    <li>Expertise in Figma, Sketch, or Adobe XD</li>
+                                    <li>Understanding of front-end development principles</li>
+                                    <li>Experience working in Agile environments</li>
+                                </ul>
+                                <p><strong>Nice to Have:</strong></p>
+                                <ul>
+                                    <li>Motion design skills</li>
+                                    <li>Experience with design thinking methodologies</li>
+                                    <li>Knowledge of accessibility standards</li>
+                                </ul>
+                                <a href="#" class="apply-button" data-job-id="2">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Job 3 -->
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="job-posting">
+                            <h2 class="job-title">Data Scientist</h2>
+                            <h3 class="job-subtitle d-flex justify-content-between align-items-center">
+                                <span>Mid-Senior Level</span>
+                            </h3>
+                            <span class="job-type">Boston, MA (Remote Possible)</span>
+                            <p class="job-description">Join our data team to derive insights from complex datasets.</p>
+                            <a href="#" class="read-more small-link" data-job-id="3">Read More <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="read-less small-link hidden" data-job-id="3">Read Less <i class="fas fa-arrow-up"></i></a>
+                            <div id="job-details-3" class="job-details hidden">
+                                <h4>🔹 Full Description:</h4>
+                                <p><strong>Responsibilities:</strong></p>
+                                <ul>
+                                    <li>Develop machine learning models to solve business problems</li>
+                                    <li>Clean, analyze, and interpret large datasets</li>
+                                    <li>Create data visualizations to communicate findings</li>
+                                    <li>Collaborate with engineering teams to deploy models</li>
+                                    <li>Stay current with latest data science techniques</li>
+                                </ul>
+                                <p><strong>Requirements:</strong></p>
+                                <ul>
+                                    <li>Advanced degree in Statistics, Computer Science, or related field</li>
+                                    <li>3+ years of professional data science experience</li>
+                                    <li>Proficiency in Python (Pandas, NumPy, Scikit-learn)</li>
+                                    <li>Experience with SQL and big data technologies</li>
+                                    <li>Strong statistical analysis background</li>
+                                </ul>
+                                <p><strong>Nice to Have:</strong></p>
+                                <ul>
+                                    <li>Experience with deep learning frameworks (TensorFlow, PyTorch)</li>
+                                    <li>Knowledge of cloud platforms (AWS, GCP, Azure)</li>
+                                    <li>Published research in relevant fields</li>
+                                </ul>
+                                <a href="#" class="apply-button" data-job-id="3">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+
+    <!-- نافذة منبثقة -->
+    <div id="apply-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Apply for the Position</h2>
+        <form method="post" enctype="multipart/form-data">
+            <input type="hidden" id="job_id" name="job_id" value="">
+            <input type="hidden" id="job_title" name="job_title" value="">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="cv">Upload CV</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div class="form-group">
+                <label for="cover-letter">Cover Letter</label>
+                <textarea id="cover-letter" name="cover-letter" rows="5"></textarea>
+            </div>
+            <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+    </div>
+</div>
+        
+
+
+        <footer class="footer-section">
+            <div class="container text-center">
+                <!-- الشعار في الأعلى -->
+                <div class="footer-logo">
+                    <img src="./images/1.png" alt="Logo">
+                </div>
+                <ul class="list-unstyled footer-social">
+
+                    <li><a href="Privacy.html">Terms and Privacy</a></li>
+                </ul>
+                <!-- أيقونات السوشيال ميديا -->
+                <ul class="list-unstyled footer-social">
+                    <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+
+                <!-- الكوبي رايت أسفل الأيقونات -->
+                <div class="footer-bottom">
+                    <p>Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="#"
+                            style="color:#fff;">Bebsa6a</a>
+                    </p>
                 </div>
             </div>
         </footer>
@@ -460,34 +546,190 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var logo1 = document.getElementById("logo1");
-            var logo2 = document.getElementById("logo2");
-            var header = document.querySelector(".site-navbar");
+    document.addEventListener("DOMContentLoaded", function () {
+        // تغيير الشعار عند التمرير
+        var logo1 = document.getElementById("logo1");
+        var logo2 = document.getElementById("logo2");
 
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 50) { // عندما ينزل المستخدم للأسفل
-                    logo1.style.opacity = "0";
-                    logo2.style.opacity = "1";
-                } else { // عندما يكون في الأعلى
-                    logo1.style.opacity = "1";
-                    logo2.style.opacity = "0";
-                }
+        window.addEventListener("scroll", function () {
+            var scrolled = window.scrollY > 50;
+            logo1.style.opacity = scrolled ? "0" : "1";
+            logo2.style.opacity = scrolled ? "1" : "0";
+        });
+
+        // عرض تفاصيل الوظيفة عند النقر على "Read More" وإدارة "Read Less"
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const jobId = this.getAttribute('data-job-id');
+                const jobDetails = document.getElementById('job-details-' + jobId);
+                const readLessLink = document.querySelector(`.read-less[data-job-id="${jobId}"]`);
+
+                // إظهار التفاصيل وإخفاء زر "Read More" وإظهار زر "Read Less"
+                jobDetails.style.display = 'block';
+                this.style.display = 'none';
+                readLessLink.style.display = 'inline';
+                jobDetails.scrollIntoView({ behavior: 'smooth' });
             });
         });
 
-        // JavaScript لإظهار وإخفاء الفورم
-          document.getElementById('apply-button').addEventListener('click', function(event) {
-            event.preventDefault(); // منع السلوك الافتراضي للرابط
-            var formSection = document.getElementById('apply-form');
-            if (formSection.style.display === 'none') {
-              formSection.style.display = 'block'; 
-            } else {
-              formSection.style.display = 'none'; 
-            }
-          });
+        // إخفاء تفاصيل الوظيفة عند النقر على "Read Less"
+        document.querySelectorAll('.read-less').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const jobId = this.getAttribute('data-job-id');
+                const jobDetails = document.getElementById('job-details-' + jobId);
+                const readMoreLink = document.querySelector(`.read-more[data-job-id="${jobId}"]`);
 
-    </script>
+                // إخفاء التفاصيل وإخفاء زر "Read Less" وإظهار زر "Read More"
+                jobDetails.style.display = 'none';
+                this.style.display = 'none';
+                readMoreLink.style.display = 'inline';
+            });
+        });
+
+        // إظهار نموذج التقديم عند النقر على "Apply Now"
+        document.querySelectorAll('.apply-button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const jobId = this.getAttribute('data-job-id');
+                document.getElementById('job_id').value = jobId;
+                const applyForm = document.getElementById('apply-form');
+                applyForm.style.display = 'block';
+                applyForm.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // البحث في الوظائف
+        document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const jobPostings = document.querySelectorAll('.job-posting');
+
+    // وظيفة البحث
+    function searchJobs() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+
+        jobPostings.forEach(job => {
+            const jobTitle = job.querySelector('.job-title').textContent.toLowerCase();
+            if (jobTitle.includes(searchTerm)) {
+                job.style.display = 'block'; // عرض الوظيفة إذا تطابقت مع البحث
+            } else {
+                job.style.display = 'none'; // إخفاء الوظيفة إذا لم تتطابق
+            }
+        });
+    }
+
+    // حدث البحث عند النقر على زر البحث
+    searchButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        searchJobs();
+    });
+
+    // حدث البحث عند الضغط على Enter في حقل البحث
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            searchJobs();
+        }
+    });
+
+    // نقل المستخدم إلى مكان الوظيفة عند النقر على نتيجة البحث
+    jobPostings.forEach(job => {
+        job.addEventListener('click', function() {
+            const jobId = job.querySelector('.read-more').getAttribute('data-job-id');
+            const jobDetails = document.getElementById('job-details-' + jobId);
+
+            // نقل المستخدم إلى مكان الوظيفة
+            jobDetails.scrollIntoView({ behavior: 'smooth' });
+
+            // عرض تفاصيل الوظيفة
+            jobDetails.style.display = 'block';
+        });
+    });
+});
+// 
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const jobPostings = document.querySelectorAll('.job-posting');
+    const resultsList = document.getElementById('results-list');
+    const searchResults = document.getElementById('search-results');
+
+    // وظيفة البحث
+    function searchJobs() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        resultsList.innerHTML = ''; // مسح النتائج السابقة
+
+        jobPostings.forEach(job => {
+            const jobTitle = job.querySelector('.job-subtitle').textContent.toLowerCase();
+            if (jobTitle.includes(searchTerm)) {
+                const jobId = job.querySelector('.read-more').getAttribute('data-job-id');
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<a href="#job-details-${jobId}" class="search-result-link">${jobTitle}</a>`;
+                resultsList.appendChild(listItem);
+            }
+        });
+
+        // عرض أو إخفاء قسم نتائج البحث
+        if (resultsList.children.length > 0) {
+            searchResults.style.display = 'block';
+        } else {
+            searchResults.style.display = 'none';
+        }
+    }
+
+    // حدث البحث عند النقر على زر البحث
+    searchButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        searchJobs();
+    });
+
+    // حدث البحث عند الضغط على Enter في حقل البحث
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            searchJobs();
+        }
+    });
+
+    // نقل المستخدم إلى مكان الوظيفة عند النقر على نتيجة البحث
+    resultsList.addEventListener('click', function(e) {
+        if (e.target.classList.contains('search-result-link')) {
+            e.preventDefault();
+            const jobId = e.target.getAttribute('href').split('-')[2];
+            const jobDetails = document.getElementById('job-details-' + jobId);
+
+            // نقل المستخدم إلى مكان الوظيفة
+            jobDetails.scrollIntoView({ behavior: 'smooth' });
+
+            // عرض تفاصيل الوظيفة
+            jobDetails.style.display = 'block';
+        }
+    });
+});
+        // النافذة المنبثقة عند التقديم على الوظيفة
+        const modal = document.getElementById('apply-modal');
+        const closeBtn = document.querySelector('.close');
+
+        document.querySelectorAll('.apply-button').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const jobId = this.getAttribute('data-job-id');
+                const jobTitle = this.closest('.job-posting').querySelector('.job-subtitle').textContent;
+
+                document.getElementById('job_id').value = jobId;
+                document.getElementById('job_title').value = jobTitle;
+                modal.style.display = 'block';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => modal.style.display = 'none');
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) modal.style.display = 'none';
+        });
+    });
+</script>
 
 </body>
 
