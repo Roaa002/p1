@@ -1868,7 +1868,7 @@ li{
   }
 
   .custom-owl-carousel .col-lg-6 {
-    top: -80px;
+    top: -100px;
   }
 
   .slide-one-item-alt img {
@@ -1961,7 +1961,7 @@ li{
   padding: 20px;
   border-radius: 5px;
   background-color: #fff;
-  /* height: 100%; */
+  height: 100%;
   position: relative; 
   margin-bottom: 30px;
 }
