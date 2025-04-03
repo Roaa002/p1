@@ -696,7 +696,7 @@ li{
 }
 
 .cta .nav-link:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
 }
 
 /* تحسين الشعار */
@@ -933,7 +933,7 @@ li{
 }
 .sticky-wrapper .site-navbar .site-menu > li > a:hover,
 .sticky-wrapper .site-navbar .site-menu > li > a.active {
-/*   color: #f1f1f1; */
+  color: #f1f1f1;
   position: relative;
 }
 .sticky-wrapper .site-navbar .site-menu > li > a:hover:after,
@@ -977,7 +977,7 @@ li{
 }
 .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover,
 .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active {
-/*   color: #3f56a6; */
+  color: #3f56a6;
   position: relative;
 }
 .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a:hover:after,
