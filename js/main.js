@@ -18,8 +18,25 @@ jQuery(document).ready(function($) {
 
 		$('.js-clone-nav').each(function() {
 			var $this = $(this);
-			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
-		});
+			
+			// استنساخ القائمة وإضافة الفئة المناسبة
+			var clonedNav = $this.clone().attr('class', 'site-nav-wrapp').appendTo('.site-mobile-menu-body');
+		  
+			// التعامل مع الروابط داخل القائمة المستنسخة (القائمة المتنقلة)
+			clonedNav.find("a").on("click", function(e) {
+			  var hash = this.hash;
+		  
+			  // التحقق من وجود العنصر قبل التمرير إليه
+			  var targetElement = $(hash);
+			  if (targetElement.length) {
+				e.preventDefault();
+				$('html, body').animate({
+				  'scrollTop': targetElement.offset().top - 50 // تعديل المسافة مع الهيدر
+				}, 800, 'easeInOutCirc');
+			  }
+			});
+		  });
+		  
 
 
 		setTimeout(function() {
@@ -296,21 +313,38 @@ jQuery(document).ready(function($) {
 	siteSticky();
 
 	// navigation
-  var OnePageNavigation = function() {
-    var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-      e.preventDefault();
+	var OnePageNavigation = function() {
+		var navToggler = $('.site-menu-toggle');
 
-      var hash = this.hash;
-
-      $('html, body').animate({
-        'scrollTop': $(hash).offset().top
-      }, 800, 'easeInOutCirc', function(){
-        window.location.hash = hash;
-      });
-
-    });
-  };
+		$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+			e.preventDefault();
+			var hash = this.hash;
+			var targetPage = hash.split("#")[0]; 
+			var sectionId = hash.split("#")[1]; 
+		  
+			if (targetPage && sectionId) {
+			 
+			  window.location.href = targetPage; 
+			  $(window).on('load', function() {
+				var targetElement = $("#" + sectionId);
+				if (targetElement.length) {
+				  $('html, body').animate({
+					'scrollTop': targetElement.offset().top - 50 
+				  }, 800, 'easeInOutCirc');
+				}
+			  });
+			} else {
+			  var targetElement = $(hash);
+			  if (targetElement.length) {
+				$('html, body').animate({
+				  'scrollTop': targetElement.offset().top - 50 
+				}, 800, 'easeInOutCirc');
+			  }
+			}
+			$('.site-mobile-menu').removeClass('active'); 
+		  });
+	  };
+	  
   OnePageNavigation();
 
   var siteScroll = function() {
