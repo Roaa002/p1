@@ -29,8 +29,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <style>
-   
-    /* كلاس عام لجعل القسم يغطي ارتفاع الشاشة بالكامل */
+    @media (max-width: 991px) {
+  .site-menu.main-menu {
+    display: none;
+  }
+  .site-menu-toggle {
+    display: block !important;
+  }
+}
+.menu-open .site-menu.main-menu {
+  display: block;
+}
   </style>
 </head>
 
@@ -58,39 +67,35 @@
 
 
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
-
       <div class="container-fluid">
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <img src="./images/2.png" id="logo1" class="logo active" alt="Logo 1">
             <img src="./images/3.png" id="logo2" class="logo" alt="Logo 2">
           </div>
-
+    
           <div>
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-xl-block">
-                <li><a href="#home-section" class="nav-link active">Home</a></li>
-                <li><a href="./about_us.html" class="nav-link">About Us</a></li>
-                <li><a href="#services-section" class="nav-link">Features and Benefits</a></li>
-                <li><a href="./careers.html" class="nav-link">Careers</a></li>
-
+                <li><a href="index.html#home-section" class="nav-link active">Home</a></li>
+                <li><a href="about_us.html#about-section" class="nav-link">About Us</a></li>
+                <li><a href="index.html#services-section" class="nav-link">Features and Benefits</a></li>
+                <li><a href="careers.html#careers-section" class="nav-link">Careers</a></li>
               </ul>
             </nav>
           </div>
           <div class="ml-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-xl-block">
-
-                <li class="cta"><a href="#contact-section" class="nav-link"><span
-                      class="border bg-danger rounded text-white border-danger">Contact Us</span></a></li>
+                <li class="cta"><a href="#contact-section" class="nav-link"><span class="border bg-danger rounded text-white border-danger">Contact Us</span></a></li>
               </ul>
             </nav>
-            <a href="#" class="d-inline-block d-xl-none site-menu-toggle js-menu-toggle float-right"><span
-                class="icon-menu h3"></span></a>
+            <a href="#" class="d-inline-block d-xl-none site-menu-toggle js-menu-toggle float-right" data-toggle="menu">
+              <span class="icon-menu h3"></span>
+            </a>
           </div>
         </div>
       </div>
-
     </header>
 
     <div class="intro-section custom-owl-carousel" id="home-section">
@@ -102,8 +107,9 @@
                 <h1>Empowering Vision with AI</h1>
                 <!-- <p class="mb-2">Target audience are: </p> -->
                 <span style="color: #ffffff94;">
-                  Designed for Businesses: Empowering Governments, Security Departments, Companies, Job Seekers, Factories.
-                  </span>
+                  Designed for Businesses: Empowering Governments, Security Departments, Companies, Job Seekers,
+                  Factories.
+                </span>
               </div>
               <div class="slide-text">
                 <h1>The Future is Hands-Free</h1>
@@ -146,8 +152,8 @@
                 committed to pioneering cutting-edge solutions that bring meaningful applications to this emerging
                 platform.
               </p>
-             
-<!--               <p><a href="./about_us.html" target="_blank" class="btn btn-outline-dark py-3 px-5">Learn more</a></p> -->
+
+              <p><a href="./about_us.html" target="_blank" class="btn btn-outline-dark py-3 px-5">Learn more</a></p>
             </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -214,75 +220,75 @@
 
     <div class="container-fluid py-6 px-5 site-section" id="services-section">
       <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-          <h1 class="display-5 mb-0 section-title"> Features and Benefits</h1>
-          <hr class="w-25 mx-auto bg-primary">
+        <h1 class="display-5 mb-0 section-title"> Features and Benefits</h1>
+        <hr class="w-25 mx-auto bg-primary">
       </div>
       <div class="row g-5 app">
-          <!-- الأعمدة اليسرى -->
-          <div class="col-lg-4">
-              <div class="row g-5 text-center">
-                  <div class="col-12">
-                      <div class="feature-card">
-                          <div class="icon-box">
-                              <i class="fa-solid fa-glasses fs-4 text-white"></i>
-                          </div>
-                          <h5>Smart Glasses App Development</h5>
-                          <p>crafting applications that bring smart glasses to life.</p>
-                      </div>
-                  </div>
-                  <div class="col-12">
-                      <div class="feature-card">
-                          <div class="icon-box">
-                              <i class="fa-solid fa-brain fs-4 text-white"></i>
-                          </div>
-                          <h5>AI-Powered Solutions</h5>
-                          <p>Implementing real-time data overlays and intelligent automation for a smarter user experience.</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-          <!-- الصورة في المنتصف + الصندوق الخامس أسفلها -->
-          <div class="col-lg-4">
-              <div class="feature-image d-flex justify-content-center align-items-center mb-4">
-                  <img class="img-fluid" src="./images/427.png" alt="">
-              </div>
-              <!-- الصندوق الخامس أسفل الصورة -->
-              <div class="feature-card text-center">
+        <!-- الأعمدة اليسرى -->
+        <div class="col-lg-4">
+          <div class="row g-5 text-center">
+            <div class="col-12">
+              <div class="feature-card">
                 <div class="icon-box">
-                    <i class="fa-solid fa-vr-cardboard fs-4 text-white"></i>
+                  <i class="fa-solid fa-glasses fs-4 text-white"></i>
                 </div>
-                <h5>Real Time Data Overlays</h5>
-                <p>Providing AI powered information at a glance</p>
+                <h5>Smart Glasses App Development</h5>
+                <p>crafting applications that bring smart glasses to life.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="feature-card">
+                <div class="icon-box">
+                  <i class="fa-solid fa-brain fs-4 text-white"></i>
+                </div>
+                <h5>AI-Powered Solutions</h5>
+                <p>Implementing real-time data overlays and intelligent automation for a smarter user experience.</p>
+              </div>
             </div>
           </div>
-           
-          <!-- الأعمدة اليمنى -->
-          <div class="col-lg-4">
-              <div class="row g-5 text-center">
-                  <div class="col-12">
-                      <div class="feature-card">
-                          <div class="icon-box">
-                              <i class="fa-solid fa-handshake fs-4 text-white"></i>
-                          </div>
-                          <h5>Hands-Free Navigation</h5>
-                          <p>Enabling seamless interaction and accessibility for users in various industries.</p>
-                      </div>
-                  </div>
-                  <div class="col-12">
-                      <div class="feature-card">
-                          <div class="icon-box">
-                              <i class="fa-solid fa-laptop fs-4 text-white"></i>
-                          </div>
-                          <h5>Computer Vision Integration</h5>
-                          <p>Utilizing advanced image and object recognition for a highly responsive digital experience.</p>
-                      </div>
-                  </div>
-              </div>
+        </div>
+
+        <!-- الصورة في المنتصف + الصندوق الخامس أسفلها -->
+        <div class="col-lg-4">
+          <div class="feature-image d-flex justify-content-center align-items-center mb-4">
+            <img class="img-fluid" src="./images/427.png" alt="">
           </div>
+          <!-- الصندوق الخامس أسفل الصورة -->
+          <div class="feature-card text-center">
+            <div class="icon-box">
+              <i class="fa-solid fa-vr-cardboard fs-4 text-white"></i>
+            </div>
+            <h5>Real Time Data Overlays</h5>
+            <p>Providing AI powered information at a glance</p>
+          </div>
+        </div>
+
+        <!-- الأعمدة اليمنى -->
+        <div class="col-lg-4">
+          <div class="row g-5 text-center">
+            <div class="col-12">
+              <div class="feature-card">
+                <div class="icon-box">
+                  <i class="fa-solid fa-handshake fs-4 text-white"></i>
+                </div>
+                <h5>Hands-Free Navigation</h5>
+                <p>Enabling seamless interaction and accessibility for users in various industries.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="feature-card">
+                <div class="icon-box">
+                  <i class="fa-solid fa-laptop fs-4 text-white"></i>
+                </div>
+                <h5>Computer Vision Integration</h5>
+                <p>Utilizing advanced image and object recognition for a highly responsive digital experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
-  
+    </div>
+
 
     <div class="site-section full-height-section">
       <div class="container">
@@ -311,12 +317,12 @@
       </div>
     </div>
 
-    <div class="site-section section-2 bg-light" id="careers-section" data-aos="fade">
+    <div class="site-section section-2 bg-light" data-aos="fade">
       <div class="container">
         <div class="row justify-content-sm-between">
           <div class="col-lg-6 mb-5">
             <h2 class="section-title">Careers: Join Our Team</h2>
-            <p>We’re Hiring: Computer Vision/AI Expert</p>
+            <p>We’re Hiring: <a href="./Careers.html">Our Jobs</a> </p>
             <p>We are looking for talented professionals who share our passion for AI and smart glasses technology. If
               you are eager to be part of an innovative and fast-growing company, we invite you to apply.</p>
           </div>
@@ -360,7 +366,8 @@
               Transform your business with AI-powered smart glasses—partner with us for enterprise solutions today!
             </p>
             <p class="mb-3">
-              <i class="fa-solid fa-envelope text-primary"></i>   <a href="mailto:Info@humanityaid.ai" target="_blank" class="px-2" >Info@humanityaid.ai</a>
+              <i class="fa-solid fa-envelope text-primary"></i> <a href="mailto:Info@humanityaid.ai" target="_blank"
+                class="px-2">Info@humanityaid.ai</a>
             </p>
             <form method="post">
               <div class="form-group row">
@@ -408,28 +415,30 @@
 
     <footer class="footer-section">
       <div class="container text-center">
-          <!-- الشعار في الأعلى -->
-          <div class="footer-logo">
-              <img src="./images/1.png" alt="Logo">
-          </div>
-          <ul class="list-unstyled footer-link">
-           
-            <li><a href="Privacy.html">privacy and policy</a></li>
+        <!-- الشعار في الأعلى -->
+        <div class="footer-logo">
+          <img src="./images/1.png" alt="Logo">
+        </div>
+        <ul class="list-unstyled footer-link">
+
+          <li><a href="Privacy.html">privacy and policy</a></li>
         </ul>
-          <!-- أيقونات السوشيال ميديا -->
-          <ul class="list-unstyled footer-social">
-            <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <!-- أيقونات السوشيال ميديا -->
+        <ul class="list-unstyled footer-social">
+          <li><a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
 
-          
-  
-          <!-- الكوبي رايت أسفل الأيقونات -->
-          <div class="footer-bottom">
-              <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved </p>
-          </div>
+
+
+        <!-- الكوبي رايت أسفل الأيقونات -->
+        <div class="footer-bottom">
+          <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved
+          </p>
+        </div>
       </div>
-  </footer>
-  
+    </footer>
+
 
 
   </div> <!-- .site-wrap -->
@@ -445,6 +454,8 @@
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
   <script src="js/main.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -462,8 +473,59 @@
         }
       });
     });
+    $(document).ready(function($) {
+    // تفعيل التمرير السلس فقط عند وجود هاش في الرابط
+    $("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+        var href = $(this).attr("href");
+        // إذا كان الرابط يحتوي على صفحة مختلفة (عن الصفحة الحالية)
+        if (href.indexOf('index.html') === -1) {
+            return; // لا نطبق التمرير السلس على الروابط التي تؤدي إلى صفحات أخرى
+        }
+
+        e.preventDefault(); // منع الانتقال الافتراضي
+
+        var hash = this.hash;
+        var targetElement = $(hash);
+
+        // التحقق من وجود العنصر
+        if (targetElement.length) {
+            // التمرير السلس إلى العنصر
+            $('html, body').animate({
+                scrollTop: targetElement.offset().top - 50 // تعديل للمسافة مع الهيدر
+            }, 800, 'easeInOutCirc');
+        }
+
+        // تغيير الـ URL بدون إعادة تحميل الصفحة
+        window.history.pushState(null, null, hash);
+    });
+
+    // التمرير مباشرة إلى الـ hash عند تحميل الصفحة
+    $(window).on('load', function() {
+        var hash = window.location.hash;
+        if (hash) {
+            var targetElement = $(hash);
+            if (targetElement.length) {
+                $('html, body').animate({
+                    scrollTop: targetElement.offset().top - 50 // تعديل للمسافة مع الهيدر
+                }, 800, 'easeInOutCirc');
+            }
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.js-menu-toggle');
+  const body = document.body;
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      body.classList.toggle('menu-open');
+    });
+  }
+});
 
   </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 

@@ -40,7 +40,7 @@
 
     .intro-section,
     .intro-section .container .row {
-      height: 60vh;
+      height: 40vh;
       min-height: 90px;
     }
 
@@ -210,7 +210,7 @@
   </style>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100" id="about-section">
 
 
   <div id="overlayer"></div>
@@ -235,7 +235,7 @@
 
     <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
-      <div class="container-fluid">
+      <div class="container-fluid">`
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <img src="./images/2.png" id="logo1" class="logo active" alt="Logo 1">
@@ -245,7 +245,7 @@
           <div>
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-xl-block">
-                <li><a href="./index.html#home-section" class="nav-link">Home</a></li>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
                 <li><a href="#" class="nav-link active">About Us</a></li>
                 <li><a href="./index.html#services-section" class="nav-link">Features and Benefits</a></li>
                 <li><a href="./careers.html" class="nav-link">Careers</a></li>
@@ -484,6 +484,50 @@
         }
       });
     });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.main-menu li a, .smoothscroll, .site-mobile-menu .site-nav-wrap li a').forEach(link => {
+        link.addEventListener("click", function (event) {
+            let href = this.getAttribute("href");
+
+            if (href.startsWith("#")) {
+                // ✅ التمرير داخل نفس الصفحة
+                event.preventDefault();
+                let targetElement = document.querySelector(href);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // تعديل حسب الهدير
+                        behavior: "smooth"
+                    });
+                }
+            } else if (!href.includes(window.location.hostname)) {
+                // ✅ التأكد من فتح الصفحة المطلوبة عند التنقل
+                event.preventDefault();
+                let parts = href.split("#");
+                if (parts.length > 1) {
+                    sessionStorage.setItem("scrollTo", parts[1]); // تخزين الجزء المطلوب
+                }
+                window.location.href = href; // الانتقال إلى الصفحة المطلوبة
+            }
+        });
+    });
+
+    // ✅ عند تحميل الصفحة، انتقل إلى القسم المخزن في sessionStorage
+    let scrollToSection = sessionStorage.getItem("scrollTo");
+    if (scrollToSection) {
+        sessionStorage.removeItem("scrollTo"); // مسح القيمة بعد الاستخدام
+        let targetElement = document.getElementById(scrollToSection);
+        if (targetElement) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: "smooth"
+                });
+            }, 500); // تأخير بسيط لضمان تحميل الصفحة بالكامل
+        }
+    }
+});
 
   </script>
 

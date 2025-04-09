@@ -40,7 +40,7 @@
 
         .intro-section,
         .intro-section .container .row {
-            height: 60vh;
+            height: 40vh;
             min-height: 90px;
         }
 
@@ -160,7 +160,7 @@
                     <div>
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-xl-block">
-                                <li><a href="./index.html#home-section" class="nav-link">Home</a></li>
+                                <li><a href="./index.html" class="nav-link">Home</a></li>
                                 <li><a href="./about_us.html" class="nav-link">About Us</a></li>
                                 <li><a href="./index.html#services-section" class="nav-link">Features and Benefits</a></li>
                                 <li><a href="./careers.html" class="nav-link active">Careers</a></li>
@@ -275,7 +275,7 @@
                         </div>
                         <div class="accordion">
                             <input type="radio" name="radio-a" id="check9">
-                            <label class="accordion-label" for="check9">9. PContact Information
+                            <label class="accordion-label" for="check9">9. Contact Information
                             </label>
                             <div class="accordion-content">
                                 <p>For questions or concerns about our privacy policy, please contact us at <a href="mailto:privacy@humanityaid.ai">privacy@humanityaid.ai</a> 
@@ -328,191 +328,67 @@
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/main.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // تغيير الشعار عند التمرير
-            var logo1 = document.getElementById("logo1");
-            var logo2 = document.getElementById("logo2");
-
-            window.addEventListener("scroll", function () {
-                var scrolled = window.scrollY > 50;
-                logo1.style.opacity = scrolled ? "0" : "1";
-                logo2.style.opacity = scrolled ? "1" : "0";
-            });
-
-            // عرض تفاصيل الوظيفة عند النقر على "Read More" وإدارة "Read Less"
-            document.querySelectorAll('.read-more').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const jobId = this.getAttribute('data-job-id');
-                    const jobDetails = document.getElementById('job-details-' + jobId);
-                    const readLessLink = document.querySelector(`.read-less[data-job-id="${jobId}"]`);
-
-                    // إظهار التفاصيل وإخفاء زر "Read More" وإظهار زر "Read Less"
-                    jobDetails.style.display = 'block';
-                    this.style.display = 'none';
-                    readLessLink.style.display = 'inline';
-                    jobDetails.scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-
-            // إخفاء تفاصيل الوظيفة عند النقر على "Read Less"
-            document.querySelectorAll('.read-less').forEach(link => {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const jobId = this.getAttribute('data-job-id');
-                    const jobDetails = document.getElementById('job-details-' + jobId);
-                    const readMoreLink = document.querySelector(`.read-more[data-job-id="${jobId}"]`);
-
-                    // إخفاء التفاصيل وإخفاء زر "Read Less" وإظهار زر "Read More"
-                    jobDetails.style.display = 'none';
-                    this.style.display = 'none';
-                    readMoreLink.style.display = 'inline';
-                });
-            });
-
-            // إظهار نموذج التقديم عند النقر على "Apply Now"
-            document.querySelectorAll('.apply-button').forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const jobId = this.getAttribute('data-job-id');
-                    document.getElementById('job_id').value = jobId;
-                    const applyForm = document.getElementById('apply-form');
-                    applyForm.style.display = 'block';
-                    applyForm.scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-
-            // البحث في الوظائف
-            document.addEventListener('DOMContentLoaded', function () {
-                const searchInput = document.getElementById('search-input');
-                const searchButton = document.getElementById('search-button');
-                const jobPostings = document.querySelectorAll('.job-posting');
-
-                // وظيفة البحث
-                function searchJobs() {
-                    const searchTerm = searchInput.value.trim().toLowerCase();
-
-                    jobPostings.forEach(job => {
-                        const jobTitle = job.querySelector('.job-title').textContent.toLowerCase();
-                        if (jobTitle.includes(searchTerm)) {
-                            job.style.display = 'block'; // عرض الوظيفة إذا تطابقت مع البحث
-                        } else {
-                            job.style.display = 'none'; // إخفاء الوظيفة إذا لم تتطابق
-                        }
-                    });
-                }
-
-                // حدث البحث عند النقر على زر البحث
-                searchButton.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    searchJobs();
-                });
-
-                // حدث البحث عند الضغط على Enter في حقل البحث
-                searchInput.addEventListener('keypress', function (e) {
-                    if (e.key === 'Enter') {
-                        e.preventDefault();
-                        searchJobs();
-                    }
-                });
-
-                // نقل المستخدم إلى مكان الوظيفة عند النقر على نتيجة البحث
-                jobPostings.forEach(job => {
-                    job.addEventListener('click', function () {
-                        const jobId = job.querySelector('.read-more').getAttribute('data-job-id');
-                        const jobDetails = document.getElementById('job-details-' + jobId);
-
-                        // نقل المستخدم إلى مكان الوظيفة
-                        jobDetails.scrollIntoView({ behavior: 'smooth' });
-
-                        // عرض تفاصيل الوظيفة
-                        jobDetails.style.display = 'block';
-                    });
-                });
-            });
-            // 
-            document.addEventListener('DOMContentLoaded', function () {
-                const searchInput = document.getElementById('search-input');
-                const searchButton = document.getElementById('search-button');
-                const jobPostings = document.querySelectorAll('.job-posting');
-                const resultsList = document.getElementById('results-list');
-                const searchResults = document.getElementById('search-results');
-
-                // وظيفة البحث
-                function searchJobs() {
-                    const searchTerm = searchInput.value.trim().toLowerCase();
-                    resultsList.innerHTML = ''; // مسح النتائج السابقة
-
-                    jobPostings.forEach(job => {
-                        const jobTitle = job.querySelector('.job-subtitle').textContent.toLowerCase();
-                        if (jobTitle.includes(searchTerm)) {
-                            const jobId = job.querySelector('.read-more').getAttribute('data-job-id');
-                            const listItem = document.createElement('li');
-                            listItem.innerHTML = `<a href="#job-details-${jobId}" class="search-result-link">${jobTitle}</a>`;
-                            resultsList.appendChild(listItem);
-                        }
-                    });
-
-                    // عرض أو إخفاء قسم نتائج البحث
-                    if (resultsList.children.length > 0) {
-                        searchResults.style.display = 'block';
-                    } else {
-                        searchResults.style.display = 'none';
-                    }
-                }
-
-                // حدث البحث عند النقر على زر البحث
-                searchButton.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    searchJobs();
-                });
-
-                // حدث البحث عند الضغط على Enter في حقل البحث
-                searchInput.addEventListener('keypress', function (e) {
-                    if (e.key === 'Enter') {
-                        e.preventDefault();
-                        searchJobs();
-                    }
-                });
-
-                // نقل المستخدم إلى مكان الوظيفة عند النقر على نتيجة البحث
-                resultsList.addEventListener('click', function (e) {
-                    if (e.target.classList.contains('search-result-link')) {
-                        e.preventDefault();
-                        const jobId = e.target.getAttribute('href').split('-')[2];
-                        const jobDetails = document.getElementById('job-details-' + jobId);
-
-                        // نقل المستخدم إلى مكان الوظيفة
-                        jobDetails.scrollIntoView({ behavior: 'smooth' });
-
-                        // عرض تفاصيل الوظيفة
-                        jobDetails.style.display = 'block';
-                    }
-                });
-            });
-            // النافذة المنبثقة عند التقديم على الوظيفة
-            const modal = document.getElementById('apply-modal');
-            const closeBtn = document.querySelector('.close');
-
-            document.querySelectorAll('.apply-button').forEach(button => {
-                button.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const jobId = this.getAttribute('data-job-id');
-                    const jobTitle = this.closest('.job-posting').querySelector('.job-subtitle').textContent;
-
-                    document.getElementById('job_id').value = jobId;
-                    document.getElementById('job_title').value = jobTitle;
-                    modal.style.display = 'block';
-                });
-            });
-
-            closeBtn.addEventListener('click', () => modal.style.display = 'none');
-            window.addEventListener('click', (e) => {
-                if (e.target === modal) modal.style.display = 'none';
-            });
+          var logo1 = document.getElementById("logo1");
+          var logo2 = document.getElementById("logo2");
+          var header = document.querySelector(".site-navbar");
+    
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 50) { // عندما ينزل المستخدم للأسفل
+              logo1.style.opacity = "0";
+              logo2.style.opacity = "1";
+            } else { // عندما يكون في الأعلى
+              logo1.style.opacity = "1";
+              logo2.style.opacity = "0";
+            }
+          });
         });
-    </script>
+        document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.main-menu li a, .smoothscroll, .site-mobile-menu .site-nav-wrap li a').forEach(link => {
+        link.addEventListener("click", function (event) {
+            let href = this.getAttribute("href");
+
+            if (href.startsWith("#")) {
+                // ✅ التمرير داخل نفس الصفحة
+                event.preventDefault();
+                let targetElement = document.querySelector(href);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // تعديل حسب الهدير
+                        behavior: "smooth"
+                    });
+                }
+            } else if (!href.includes(window.location.hostname)) {
+                // ✅ التأكد من فتح الصفحة المطلوبة عند التنقل
+                event.preventDefault();
+                let parts = href.split("#");
+                if (parts.length > 1) {
+                    sessionStorage.setItem("scrollTo", parts[1]); // تخزين الجزء المطلوب
+                }
+                window.location.href = href; // الانتقال إلى الصفحة المطلوبة
+            }
+        });
+    });
+
+    // ✅ عند تحميل الصفحة، انتقل إلى القسم المخزن في sessionStorage
+    let scrollToSection = sessionStorage.getItem("scrollTo");
+    if (scrollToSection) {
+        sessionStorage.removeItem("scrollTo"); // مسح القيمة بعد الاستخدام
+        let targetElement = document.getElementById(scrollToSection);
+        if (targetElement) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: "smooth"
+                });
+            }, 500); // تأخير بسيط لضمان تحميل الصفحة بالكامل
+        }
+    }
+});
+
+      </script>
 
 </body>
 
